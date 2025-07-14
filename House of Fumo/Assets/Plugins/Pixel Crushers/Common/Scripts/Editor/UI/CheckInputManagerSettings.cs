@@ -20,25 +20,9 @@ namespace PixelCrushers
         private const string TMP_PRESENT = "TMP_PRESENT";
         private const string USE_NEW_INPUT = "USE_NEW_INPUT";
 
-        //private const string CheckedInputManagerSettingsEditorPrefsKey = "PixelCrushers.CheckedInputManagerSettings";
-
         private const string CheckedFlagFilename = "Plugins/Pixel Crushers/Common/checked.txt";
 
         static CheckInputManagerSettings()
-        {
-            Check_TMP_PRESENT();
-            Check_Input_System();
-        }
-
-        private static void Check_TMP_PRESENT()
-        {
-#if UNITY_6000_1_OR_NEWER && !TMP_PRESENT
-            MoreEditorUtility.TryAddScriptingDefineSymbols(TMP_PRESENT);
-            Debug.Log("Added Scripting Define Symbol TMP_PRESENT to support TextMesh Pro.");
-#endif
-        }
-
-        private static void Check_Input_System()
         {
             var filename = $"{Application.dataPath}/{CheckedFlagFilename}";
             var hasAlreadyChecked = File.Exists(filename);
@@ -46,6 +30,20 @@ namespace PixelCrushers
 
             File.WriteAllText(filename, $"Checked TMPro & Input System defines on {System.DateTime.Now}");
 
+            Check_TMP_PRESENT();
+            Check_Input_System();
+        }
+
+        private static void Check_TMP_PRESENT()
+        {
+#if UNITY_6000_0_OR_NEWER && !TMP_PRESENT
+            MoreEditorUtility.TryAddScriptingDefineSymbols(TMP_PRESENT);
+            Debug.Log("Added Scripting Define Symbol TMP_PRESENT to support TextMesh Pro.");
+#endif
+        }
+
+        private static void Check_Input_System()
+        {
 #if ENABLE_INPUT_SYSTEM && !USE_NEW_INPUT
             if (EditorUtility.DisplayDialog("Enable Input System Support?",
                 "Do you want to enable Input System package support for this Pixel Crushers asset?", "Yes", "No"))

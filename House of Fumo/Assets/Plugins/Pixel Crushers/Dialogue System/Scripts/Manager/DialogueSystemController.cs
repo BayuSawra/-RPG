@@ -2494,7 +2494,22 @@ namespace PixelCrushers.DialogueSystem
         public static void ChangeActorName(string actorName, string newDisplayName)
         {
             if (DialogueDebug.logInfo) Debug.Log("Dialogue System: Changing " + actorName + "'s Display Name to " + newDisplayName);
+
+            // Update actor's Display Name:
             DialogueLua.SetActorField(actorName, "Display Name", newDisplayName);
+
+            // Update Variable["Actor"] or Variable["Conversant"] if applicable:
+            var actorTableIndex = DialogueLua.StringToTableIndex(actorName);
+            if (actorTableIndex == DialogueLua.GetVariable("ActorIndex").asString)
+            {
+                DialogueLua.SetVariable("Actor", newDisplayName);
+            }
+            if (actorTableIndex == DialogueLua.GetVariable("ConversantIndex").asString)
+            {
+                DialogueLua.SetVariable("Converrsant", newDisplayName);
+            }
+
+            // Update active dialogue UI subtitle panels:
             if (DialogueManager.isConversationActive)
             {
                 var actor = DialogueManager.MasterDatabase.GetActor(actorName);
