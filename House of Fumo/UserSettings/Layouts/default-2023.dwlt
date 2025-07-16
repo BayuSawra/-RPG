@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 6103
+  controlID: 133
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 6104
+  controlID: 134
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 6105
+  controlID: 57
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 6106
+  controlID: 58
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -294,14 +294,14 @@ MonoBehaviour:
     y: 953.3333
     width: 1975.3334
     height: 354.00006
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -500,7 +500,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 729.6667
+    width: 755.6667
     height: 932.3333
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -516,15 +516,15 @@ MonoBehaviour:
   actorFoldouts:
     propertiesKeys: 
     propertiesValues: 
-    fieldsKeys: 
-    fieldsValues: 
+    fieldsKeys: ffffffff
+    fieldsValues: 00
   actorFilter: 
   hideFilteredOutActors: 0
   actorListSelectedIndex: -1
-  actorTexturesFoldout: 1
+  actorTexturesFoldout: 0
   actorSpritesFoldout: 1
   showNodeEditor: 1
-  currentConversationID: 3
+  currentConversationID: 1
   globalSearchText: 
   globalReplaceText: 
   globalSearchSpecificConversation: 0
@@ -539,7 +539,7 @@ MonoBehaviour:
     export: 0
     localization: 0
     stats: 0
-    checkIssues: 1
+    checkIssues: 0
     editorSettings: 0
     AI: 0
   databaseToMerge: {fileID: 0}
@@ -568,12 +568,12 @@ MonoBehaviour:
   itemFoldouts:
     propertiesKeys: 
     propertiesValues: 
-    fieldsKeys: 
-    fieldsValues: 
+    fieldsKeys: ffffffff
+    fieldsValues: 00
   itemFilter: 
   hideFilteredOutItems: 0
   itemListSelectedIndex: -1
-  questEntrySelectedIdx: -1
+  questEntrySelectedIdx: 0
   showCompactQuestEntryList: 1
   localizationLanguages:
     languages: []
@@ -598,7 +598,7 @@ MonoBehaviour:
   locationListSelectedIndex: -1
   toolbar:
     current: 6
-  database: {fileID: 11400000, guid: 65a5da80273d5ca4688f96f34372c181, type: 2}
+  database: {fileID: 11400000, guid: 608048e2778ad224499e551ae04469e1, type: 2}
   debug: 0
   registerCompleteObjectUndo: 1
   scrollPosition: {x: 0, y: 0}
@@ -612,7 +612,7 @@ MonoBehaviour:
     dialogueEntries: 0
     variables: 0
   variableView:
-    database: {fileID: 11400000, guid: 65a5da80273d5ca4688f96f34372c181, type: 2}
+    database: {fileID: 11400000, guid: 608048e2778ad224499e551ae04469e1, type: 2}
     isDialogueEditorWindow: 1
     variableFilter: 
     showVariableGroupFoldouts: 0
@@ -620,32 +620,27 @@ MonoBehaviour:
   watches: []
   autoUpdateWatches: 0
   watchUpdateFrequency: 1
-  nextWatchUpdateTime: 5520.5105619000005
+  nextWatchUpdateTime: 849.6760915
   watchableVariableNames:
   - Actor
   - ActorIndex
   - Alert
-  - AtWork
   - Conversant
   - ConversantIndex
-  watchableQuestNames: []
+  - Key.NumCollected
+  watchableQuestNames:
+  - Key
   luaCommand: 
   zoomLocked: 0
-  _zoom: 1
+  _zoom: 0.7000003
   canvasRectWidthMultiplier: 1
   canvasScrollView: {x: 100000, y: 100000}
   canvasScrollPosition: {x: 0, y: 0}
   conversationTitles:
-  - opne1
-  - Questioning
-  - Barks
-  - New Conversation 4
+  - Find3Keys
   conversationTitlesForMenu:
-  - opne1
-  - Questioning
-  - Barks
-  - New Conversation 4
-  conversationIndex: 2
+  - Find3Keys
+  conversationIndex: 0
   confirmDelete: 1
   trimWhitespaceAroundPipes: 1
   conversationTitleFilter: 
@@ -1189,9 +1184,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.86847705, y: -0.27329952, z: 0.0701127}
+    m_Target: {x: -0.24920855, y: -1.1629484, z: -0.01649652}
     speed: 2
-    m_Value: {x: 0.86847705, y: -0.27329952, z: 0.0701127}
+    m_Value: {x: -0.24920855, y: -1.1629484, z: -0.01649652}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1241,9 +1236,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.108023
+    m_Target: 2.9226646
     speed: 2
-    m_Value: 5.108023
+    m_Value: 2.9226646
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1419,9 +1414,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1e9b0000
-      m_LastClickedID: 39710
-      m_ExpandedIDs: 04f9ffffb2faffffbefaffff109b0000189b0000f29b0000f4d20000
+      m_SelectedIDs: 029b0000
+      m_LastClickedID: 39682
+      m_ExpandedIDs: bcfaffffbefaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1438,7 +1433,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 11}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1493,7 +1488,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Game
+    - Assets/Pixel Crushers Tutorial Assets/2D/Sprites
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1503,16 +1498,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 70
   m_LastFolders:
-  - Assets/Scenes/Game
+  - Assets/Pixel Crushers Tutorial Assets/2D/Sprites
   m_LastFoldersGridSize: 70
   m_LastProjectPath: D:\-RPG\House of Fumo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6ca20000
-    m_LastClickedID: 41580
-    m_ExpandedIDs: 00000000c8a10000caa10000cca10000cea10000d0a10000d2a10000d4a10000d6a10000d8a10000daa10000dca10000dea1000064a200006aa90000
+    scrollPos: {x: 0, y: 26.999939}
+    m_SelectedIDs: 26a50000
+    m_LastClickedID: 42278
+    m_ExpandedIDs: 0000000024a2000028a200002aa200002ca200002ea2000030a2000032a2000034a2000036a2000038a200003aa200003ca20000dca20000d0a40000d2a40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1541,7 +1536,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c087ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8a10000caa10000cca10000cea10000d0a10000d2a10000d4a10000d6a10000d8a10000daa10000dca10000dea10000
+    m_ExpandedIDs: 0000000024a2000026a2000028a200002aa200002ca200002ea2000030a2000032a2000034a2000036a2000038a200003aa200003ca200003ea2000040a20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1567,10 +1562,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ee7cffff
-    m_LastClickedInstanceID: -33554
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300002c9e0000c2870000be87000038a00000608800005e880000b08600006287000012910000c8930000b48a0000a8a00000aca000000000000026890000229500005a8d0000c2010000ba890000b489000030a000004aa000004c9b0000669b0000aea00000
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300002c9e0000c2870000be87000038a00000608800005e880000b08600006287000012910000c8930000b48a0000a8a00000aca000000000000026890000229500005a8d0000c2010000ba890000b489000030a000004aa000004c9b0000669b0000aea0000016a700005aa7000096a70000c8a70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
